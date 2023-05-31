@@ -6,6 +6,9 @@ export type Translation = {
 			links: {
 				welcome: string,
 				about: string,
+				skills: string,
+				stats: string,
+				social: string,
 			},
 		},
 		footer: {
@@ -20,6 +23,18 @@ export type Translation = {
 		about: {
 			title: string,
 			description: string[],
+		},
+		skills: {
+			title: string,
+			description: string,
+		},
+		stats: {
+			title: string,
+			description: string,
+		},
+		social: {
+			title: string,
+			description: string,
 		},
 	},
 }

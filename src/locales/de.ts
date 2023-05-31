@@ -13,6 +13,9 @@ export default function de(): Translation {
 				links: {
 					welcome: "Willkommen",
 					about: "Über",
+					skills: "Skills",
+					stats: "Statistiken",
+					social: "Socials",
 				},
 			},
 			footer: {
@@ -33,6 +36,18 @@ export default function de(): Translation {
 					"Ich arbeite an diesen Projekten nicht in meiner Vollzeitausbildung. Das heisst, dass ich in der Freizeit neben anderen Hobbys und in den Ferien mache. Da ich mich sehr für IT und Programmierung interessiere, ist dies sozusagen ein weiteres Hobby.",
 					"Mein persönliches Portfolio findest du unter <a href='https://nicholas-krebs.ch'>nicholas-krebs.ch</a>.",
 				],
+			},
+			skills: {
+				title: "Skills",
+				description: "",
+			},
+			stats: {
+				title: "Statistiken",
+				description: "",
+			},
+			social: {
+				title: "Socials",
+				description: "",
 			},
 		},
 	};
