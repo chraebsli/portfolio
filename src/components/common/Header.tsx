@@ -5,7 +5,7 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 import { Image } from "../Text";
 
-const pages = [
+const sections = [
 	{key: "about", href: "/about"},
 	{key: "services", href: "/services"},
 	{key: "projects", href: "/projects"},
@@ -34,7 +34,7 @@ export default function Header({toggleTheme, checked}: Props) {
 					<Navbar.Collapse id={"responsive-navbar-nav"}>
 						<Nav className={"me-auto"} />
 						<Nav>
-							{pages.map(page => (
+							{sections.map(page => (
 								<Nav.Link key={page.key} href={page.href}>
 									{t(`header.links.${page.key}`)}
 								</Nav.Link>

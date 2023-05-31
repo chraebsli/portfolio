@@ -4,40 +4,25 @@ import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { PageUrl } from "../../type/page";
 
-const specialPages = {
-	noFollow: ["projects", "imprint"],
-	noIndex: [""],
-};
+export default function Meta() {
+	const {t} = useTranslation("meta");
 
-type Props = {
-	page: string;
-}
-export default function Meta({page}: Props) {
-	const pageElements = page.split("/").splice(1);
-	const parentPage = pageElements[0];
-	const customKey = parentPage === "project" && "project" || parentPage === "service" && "service";
-	const {t} = useTranslation(customKey ? "common" : "meta");
-
-	const translationPath = pageElements.join(".");
-	const title = t(`${translationPath}.title`);
-	const description = t(`${translationPath}.description`);
-
-	const follow = specialPages.noFollow.includes(parentPage) ? "nofollow" : "follow";
-	const index = specialPages.noIndex.includes(parentPage) ? "noindex" : "index";
+	const title = t("title");
+	const description = t("description");
 
 	const openGraph = {
-		title: `${title} | chraebsli IT-Services`,
+		title: `${title} | Nicholas Krebs`,
 		description,
-		image: customKey && `${PageUrl}/media/${pageElements.join("/")}.webp` || `${PageUrl}/assets/logo-white-transparent.svg`,
-		url: `${PageUrl}/${pageElements.join("/")}`,
+		image: `${PageUrl}/assets/logo-white-transparent.svg`,
+		url: `${PageUrl}`,
 	};
 
 	return (
 		<Helmet>
-			<title>{`${title} | chraebsli IT-Services`}</title>
-			<meta name="description" content={description} />
-			<meta name="robots" content={`${follow}, ${index}`} />
-			<meta name="googlebot" content={`${follow}, ${index}`} />
+			<title>{openGraph.title}</title>
+			<meta name="description" content={openGraph.description} />
+			<meta name="robots" content={"follow, index"} />
+			<meta name="googlebot" content={"follow, index"} />
 
 			<meta property="og:title" content={openGraph.title} />
 			<meta property="og:description" content={openGraph.description} />

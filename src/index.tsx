@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import { Box, Container, createTheme, CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useCookies } from "react-cookie";
-import { Pages, Paths } from "./type/page";
 import { inject } from "@vercel/analytics";
 
 // styles
@@ -13,19 +11,12 @@ import "./styles/main.sass";
 // components
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
-import Loader from "./components/common/Loader";
 import ScrollToTop from "./components/common/ScrollToTop";
 
-// pages
-import Home from "./pages/Home/Home";
-import Services from "./pages/Services/Services";
-import Service from "./pages/Services/Service";
-import Projects from "./pages/Projects/Projects";
-import Project from "./pages/Projects/Project";
-import Contact from "./pages/Contact";
-import About from "./pages/About/About";
-import Imprint from "./pages/Imprint";
-import NotFound404 from "./pages/Error/404";
+// layouts
+import Welcome from "./layouts/Welcome";
+import About from "./layouts/About";
+import { Line } from "./components/Text";
 
 const light = createTheme({
 	palette: {
@@ -63,31 +54,29 @@ function App() {
 
 	inject();
 
+	const sections = [
+		<Welcome key={1}/>,
+		<About key={2}/>,
+	];
+
 	return (
 		<ThemeProvider theme={theme === "light" ? light : dark}>
-			<Router>
-				<CssBaseline />
-				<Header toggleTheme={toggleTheme} checked={checked} />
-				<Container sx={{mt: "2rem", mb: "2rem"}}>
-					<React.Suspense fallback={<Loader />}>
-						<Routes>
-							<Route path={Pages.Home} element={<Home />} />
-							<Route path={Paths.Home} element={<Home />} />
-							<Route path={Pages.Services} element={<Services />} />
-							<Route path={Pages.ServiceId} element={<Service />} />
-							<Route path={Pages.Projects} element={<Projects />} />
-							<Route path={Pages.ProjectId} element={<Project />} />
-							<Route path={Pages.About} element={<About />} />
-							<Route path={Pages.Contact} element={<Contact />} />
-							<Route path={Pages.Imprint} element={<Imprint />} />
-							<Route path={Pages.NotFound404} element={<NotFound404 />} />
-						</Routes>
-					</React.Suspense>
-				</Container>
-				<Box sx={{height: "220px", marginTop: "5rem"}} />
-				<Footer />
-				<ScrollToTop />
-			</Router>
+			<CssBaseline />
+			<Header toggleTheme={toggleTheme} checked={checked} />
+			<Box sx={{height: "150px", marginTop: "3rem"}} />
+			<Container sx={{mt: "2rem", mb: "2rem"}}>
+				<main>
+					{sections.map((section, index) => (
+						<React.Fragment key={index}>
+							{section}
+							{index !== sections.length - 1 && <Line top={5} bottom={5} />}
+						</React.Fragment>
+					))}
+				</main>
+			</Container>
+			<Box sx={{height: "220px", marginTop: "5rem"}} />
+			<Footer />
+			<ScrollToTop />
 		</ThemeProvider>
 	);
 }
