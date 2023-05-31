@@ -17,6 +17,8 @@ import ScrollToTop from "./components/common/ScrollToTop";
 import Welcome from "./layouts/Welcome";
 import About from "./layouts/About";
 import { Line } from "./components/Text";
+import Skills from "./layouts/Skills";
+import Stats from "./layouts/Stats";
 
 const light = createTheme({
 	palette: {
@@ -57,6 +59,8 @@ function App() {
 	const sections = [
 		<Welcome key={1}/>,
 		<About key={2}/>,
+		<Skills key={3}/>,
+		<Stats key={4}/>,
 	];
 
 	return (
