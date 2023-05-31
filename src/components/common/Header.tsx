@@ -4,12 +4,14 @@ import { MaterialUISwitch } from "./ThemeSwitch";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 import { Image } from "../Text";
+import { Sections } from "../../type/page";
 
 const sections = [
-	{key: "about", href: "/about"},
-	{key: "services", href: "/services"},
-	{key: "projects", href: "/projects"},
-	{key: "contact", href: "/contact"},
+	{key: "welcome", href: `#${Sections.Welcome}`},
+	{key: "about", href: `#${Sections.About}`},
+	{key: "skills", href: `#${Sections.Skills}`},
+	{key: "stats", href: `#${Sections.Stats}`},
+	{key: "social", href: `#${Sections.Social}`},
 ];
 
 type Props = {
@@ -19,7 +21,7 @@ type Props = {
 export default function Header({toggleTheme, checked}: Props) {
 	const {t} = useTranslation("components");
 	return (
-		<AppBar position={"static"} enableColorOnDark>
+		<AppBar position={"fixed"} enableColorOnDark>
 			<Container>
 				<Navbar collapseOnSelect expand={"md"} bg={"none"} variant={"dark"}>
 					<Navbar.Brand href={"/"}>

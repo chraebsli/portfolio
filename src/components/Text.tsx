@@ -4,22 +4,11 @@ import { Typography, useTheme } from "@mui/material";
 type LineProps = {
 	top?: number;
 	bottom?: number;
-	width?: string;
-	primary?: boolean;
 }
 
-export function Line({top, bottom, width, primary = true}: LineProps) {
-	const color = primary ? useTheme().palette.primary.main : useTheme().palette.secondary.main;
-
+export function Line({top = 0, bottom = 0}: LineProps) {
 	return (
-		<hr
-			style={{
-				border: `2px solid ${color}`,
-				marginTop: `${top}rem` ?? 0,
-				marginBottom: `${bottom}rem` ?? 0,
-				width: width ?? "-webkit-fill-available",
-			}}
-		/>
+		<hr style={{border: `2px solid ${useTheme().palette.primary.main}`, marginTop: `${top}rem`, marginBottom: `${bottom}rem`}} />
 	);
 }
 
@@ -28,25 +17,20 @@ type ImageProps = {
 	alt: string;
 	height?: number;
 	width?: number | string;
-	sx?: React.CSSProperties,
-	m?: boolean,
-	r?: boolean
 }
 
-export function Image({src, alt, height, width, sx, m, r}: ImageProps) {
-	return <img
-		className={r ? "r" : ""} src={src} alt={alt} height={height} width={width}
-		style={{marginBottom: m ? "2rem" : 0, ...sx}} />;
+export function Image({src, alt, height, width}: ImageProps) {
+	return <img src={src} alt={alt} height={height} width={width} />;
 }
 
 type TitleProps = {
 	children: React.ReactNode;
 }
 
-export function PageTitle({children}: TitleProps) {
+export function SectionTitle({children}: TitleProps) {
 	return <Typography variant={"h4"}>{children}</Typography>;
 }
 
-export function SectionTitle({children}: TitleProps) {
+export function SubSectionTitle({children}: TitleProps) {
 	return <Typography variant={"h5"}>{children}</Typography>;
 }
