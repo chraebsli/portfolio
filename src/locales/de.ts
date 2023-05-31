@@ -2,10 +2,9 @@ import { Translation } from "@type/translation";
 
 export default function de(): Translation {
 	return {
-		// TODO: Write text
 		meta: {
 			title: "Portfolio Nicholas Krebs",
-			description: "Ich biete verschiedene IT Dienstleistungen an, um neben meiner schulischen Lehre als Informatiker etwas Geld zu verdienen.",
+			description: "Ich bin ein Informatiklehrling im 3. Jahr und interessiere mich für Webentwicklung & Programmierung.",
 		},
 		components: {
 			header: {
@@ -25,16 +24,16 @@ export default function de(): Translation {
 		// TODO: Write text
 		sections: {
 			welcome: {
-				welcome: "Willkommen bei chraebsli IT-Services!",
-				description: "Ich biete verschiedene IT Dienstleistungen an, um neben meiner schulischen Lehre als Informatiker etwas Geld zu verdienen.",
+				welcome: "Hey, ich bin Nicholas Krebs/ «chraebsli»",
+				description: "Ich bin ein Informatiklehrling im 3. Jahr und interessiere mich für Webentwicklung & Programmierung.",
 			},
 			about: {
-				title: "Über uns",
+				title: "Über mich",
 				description: [
-					"Wir sind Chraebsli IT Services und bieten verschiedene IT Dienstleistungen an. Ich bin Informatiklehrling im 3. Lehrjahr und möchte neben meiner Ausbildung etwas verdienen, da ich keinen Lohn habe. Dies hat der Grund, da meine Ausbildung speziell ist und vom Kanton finanziert wird.",
-					"Ich möchte mit diesen Dienstleistungen zwar Geld verdienen, aber vor allem auch kleineren Vereinen und Startups ermöglichen, sich im Internet zu zeigen, ohne viel Geld ausgeben zu müssen. Dadurch probiere ich Kosten für Hosting, Email, Verwaltung, SEO, ... möglichst tief zu halten und dadurch attraktiver zu wirken. Dazu hoffe ich, dass ich später durch meine Projekte und Erfahrungen einen höheren Wert habe und bessere Stellen bekommen kann.",
-					"Ich arbeite an diesen Projekten nicht in meiner Vollzeitausbildung. Das heisst, dass ich in der Freizeit neben anderen Hobbys und in den Ferien mache. Da ich mich sehr für IT und Programmierung interessiere, ist dies sozusagen ein weiteres Hobby.",
-					"Mein persönliches Portfolio findest du unter <a href='https://nicholas-krebs.ch'>nicholas-krebs.ch</a>.",
+					"Ich bin ein Informatiklehrling im 3. Jahr an der Technischen Fachschule in Bern und interessiere mich sehr für die Informatik und vor allem für Webentwicklung & Programmierung. Daher arbeite ich auch gerne in meiner Freizeit an IT Projekten. Neben der Entwicklung leite ich noch eine Gruppe Pfadfinder und spiele in einer Brass Band.",
+					"Am liebsten programmiere ich mit React und Next.js im Frontend, Express.js und TypeORM im Backend und als Programmiersprache dazu passend TypeScript. Jedoch kenne ich mich auch mit Python und PHP aus, aber verwende diese nicht so oft.",
+					"Um neben meiner Ausbildung noch etwas zu verdienen, arbeite ich zusätzlich auch für private Kunden. Dies hat der Grund, weil meine Ausbildung schulisch basiert ist und vom Kanton Bern finanziert wird. Dadurch verdiene ich kein Geld während meiner Lehre.",
+					"Welche Dienstleistungen ich anbiete, findest du auf <a href='https://chraebsli.dev'>chraebsli.dev</a>.",
 				],
 			},
 			skills: {
