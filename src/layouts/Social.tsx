@@ -5,7 +5,7 @@ import "../components/social/SocialMedia.sass";
 import Section from "../components/common/Section";
 import { Sections } from "../type/page";
 import { SectionTitle } from "../components/common/Text";
-import SchoolIcon from "@mui/icons-material/School";
+import ShareIcon from "@mui/icons-material/Share";
 import { useTranslation } from "react-i18next";
 import socialMediaList from "../components/social/social-media-list";
 
@@ -16,7 +16,7 @@ export default function Social() {
 	return (
 		<Section name={Sections.Social}>
 			<SectionTitle>
-				<SchoolIcon /> {t(`${Sections.Social}.title`)}
+				<ShareIcon fontSize="inherit" /> {t(`${Sections.Social}.title`)}
 			</SectionTitle>
 			<Typography>
 				{t(`${Sections.Social}.description`)}

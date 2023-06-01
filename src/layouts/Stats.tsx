@@ -23,7 +23,7 @@ export default function Stats() {
 	return (
 		<Section name={Sections.Stats}>
 			<SectionTitle>
-				<PollIcon /> {t(`${Sections.Stats}.title`)}
+				<PollIcon fontSize="inherit" /> {t(`${Sections.Stats}.title`)}
 			</SectionTitle>
 			<Typography>
 				{t(`${Sections.Stats}.description`)}
