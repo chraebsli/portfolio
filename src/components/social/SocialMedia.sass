@@ -1,19 +1,19 @@
-.social-media-container
-	flex-wrap: wrap
-	flex-grow: 1
+#social
 
 	a
 		text-decoration: none
 
-	.social-media-item
+	.social-item
 		flex-basis: calc(100% / 5)
 
-		.social-media-item-icon
+		.social-item-icon
 			padding: 1rem
 			text-align: center
 
-		.social-media-item-text
+		.social-item-text
 			text-align: center
+			white-space: nowrap
 
-	.social-media-item:hover .social-media-item-text, .social-media-item:hover .social-media-item-icon
-		color: var(--primary-color)
+		&:hover
+			.social-item-text, .social-item-icon
+				color: var(--primary-color)

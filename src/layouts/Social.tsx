@@ -1,5 +1,6 @@
 import React from "react";
-import { Stack, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
 import SocialItem from "../components/social/SocialItem";
 import "../components/social/SocialMedia.sass";
 import Section from "../components/common/Section";
@@ -21,17 +22,13 @@ export default function Social() {
 			<Typography>
 				{t(`${Sections.Social}.description`)}
 			</Typography>
-			<Stack
-				className="social-media-container"
-				gap={8}
-				direction="row"
-				alignItems="center"
-				justifyContent="center"
-				marginY={10}>
+			<Grid container spacing={10} sx={{p: "1rem", mt: "1rem"}}>
 				{items.map((item, i) => (
-					<SocialItem key={i} item={item} />
+					<Grid key={i} xs={6} md={4} sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+						<SocialItem item={item} />
+					</Grid>
 				))}
-			</Stack>
+			</Grid>
 		</Section>
 	);
 }

@@ -7,12 +7,12 @@ type Props = {
 }
 export default function SocialItem({item}: Props) {
 	return (
-		<Box className="social-media-item">
+		<Box className="social-item">
 			<a href={item.href} target="_blank" rel="noreferrer">
-				<Box className="social-media-item-icon" sx={{color: "text.primary"}}>
+				<Box className="social-item-icon" sx={{width: "100%", color: "text.primary"}}>
 					{item.icon}
 				</Box>
-				<Box className="social-media-item-text" sx={{color: "text.primary"}}>
+				<Box className="social-item-text" sx={{width: "100%", color: "text.primary"}}>
 					{item.name}: <br />
 					{item.user}
 				</Box>
