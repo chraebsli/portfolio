@@ -1,5 +1,4 @@
-import React from "react";
-import { BsEnvelopeOpenFill, BsFacebook, BsGithub, BsInstagram, BsLinkedin, BsStackOverflow, BsTelegram, BsTwitter } from "react-icons/bs";
+import { BsEnvelopeOpenFill, BsGithub, BsInstagram, BsLinkedin, BsStackOverflow, BsTwitter } from "react-icons/bs";
 import { SocialItem } from "../../type/social";
 
 export default function socialMediaList(): SocialItem[] {
