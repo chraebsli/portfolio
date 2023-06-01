@@ -16,7 +16,7 @@ export function LanguageSwitcher() {
 	};
 
 	return (
-		<ButtonGroup variant="text" aria-label="language" color={"secondary"}>
+		<ButtonGroup variant="text" aria-label="language" color="secondary">
 			<Button onClick={() => {handleChange("en");}}>EN</Button>
 			<Button onClick={() => {handleChange("de");}}>DE</Button>
 		</ButtonGroup>

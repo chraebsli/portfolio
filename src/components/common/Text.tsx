@@ -28,9 +28,9 @@ type TitleProps = {
 }
 
 export function SectionTitle({children}: TitleProps) {
-	return <Typography variant={"h4"}>{children}</Typography>;
+	return <Typography variant="h4" component="h2" sx={{mb: ".5rem"}}>{children}</Typography>;
 }
 
 export function SubSectionTitle({children}: TitleProps) {
-	return <Typography variant={"h5"}>{children}</Typography>;
+	return <Typography variant="h5" component="h3">{children}</Typography>;
 }

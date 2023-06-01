@@ -21,20 +21,20 @@ type Props = {
 export default function Header({toggleTheme, checked}: Props) {
 	const {t} = useTranslation("components");
 	return (
-		<AppBar position={"fixed"} enableColorOnDark>
+		<AppBar position="fixed" enableColorOnDark>
 			<Container>
-				<Navbar collapseOnSelect expand={"md"} bg={"none"} variant={"dark"}>
-					<Navbar.Brand href={"/"}>
-						<Image src={"/assets/logo-white-transparent.svg"} alt={"logo"} width={50} height={50} />
-						<Typography component={"span"} variant={"h6"} sx={{marginLeft: "1rem"}}>
+				<Navbar collapseOnSelect expand="md" bg="none" variant="dark">
+					<Navbar.Brand href="/">
+						<Image src="/assets/logo-white-transparent.svg" alt="logo" width={50} height={50} />
+						<Typography component="span" variant="h6" sx={{marginLeft: "1rem"}}>
 							{t("header.title")}
 						</Typography>
 					</Navbar.Brand>
 
-					<Navbar.Toggle aria-controls={"header-nav"} />
+					<Navbar.Toggle aria-controls="header-nav" />
 
-					<Navbar.Collapse id={"responsive-navbar-nav"}>
-						<Nav className={"me-auto"} />
+					<Navbar.Collapse id="responsive-navbar-nav">
+						<Nav className="me-auto" />
 						<Nav>
 							{sections.map(page => (
 								<Nav.Link key={page.key} href={page.href}>
@@ -42,7 +42,7 @@ export default function Header({toggleTheme, checked}: Props) {
 								</Nav.Link>
 							))}
 						</Nav>
-						<Stack direction={"row"} sx={{alignItems: "center", justifyContent: "start"}}>
+						<Stack direction="row" sx={{alignItems: "center", justifyContent: "start"}}>
 							<LanguageSwitcher />
 							<MaterialUISwitch sx={{m: 1}} onChange={toggleTheme} checked={checked} />
 						</Stack>

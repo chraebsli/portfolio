@@ -21,8 +21,8 @@ export default function Meta() {
 		<Helmet>
 			<title>{openGraph.title}</title>
 			<meta name="description" content={openGraph.description} />
-			<meta name="robots" content={"follow, index"} />
-			<meta name="googlebot" content={"follow, index"} />
+			<meta name="robots" content="follow, index" />
+			<meta name="googlebot" content="follow, index" />
 
 			<meta property="og:title" content={openGraph.title} />
 			<meta property="og:description" content={openGraph.description} />

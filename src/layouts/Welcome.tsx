@@ -8,7 +8,7 @@ export default function Welcome() {
 
 	return (
 		<Section name={Sections.Welcome} noCard>
-			<Typography variant={"h3"} component={"h1"} sx={{color: "primary.main"}}>
+			<Typography variant="h3" component="h1" sx={{color: "primary.main"}}>
 				{t(`${Sections.Welcome}.welcome`)}
 			</Typography>
 			<Typography sx={{maxWidth: "50rem", fontSize: "1.5rem"}}>

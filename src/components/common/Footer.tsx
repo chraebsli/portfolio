@@ -6,7 +6,7 @@ export default function Footer() {
 	return (
 		<Box sx={{bottom: 0, position: "absolute", width: "100%", padding: "2rem", backgroundColor: "primary.main"}}>
 			<footer>
-				<Stack alignItems={"center"}>
+				<Stack alignItems="center">
 					<Typography sx={{color: "secondary.main"}}>
 						&copy; {new Date().getFullYear()} &mdash; {t("footer.copyright")}
 					</Typography>

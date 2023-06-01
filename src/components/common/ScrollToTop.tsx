@@ -19,8 +19,8 @@ export default function ScrollToTop() {
 				position: "fixed", bottom: "2rem", right: "2rem", zIndex: 1000,
 				backgroundColor: "primary.main", color: "primary.contrastText", borderRadius: "50%",
 			}}>
-				<IconButton aria-label="scroll to top" onClick={handleClick} size={"large"}>
-					<ArrowUpwardIcon color={"secondary"} />
+				<IconButton aria-label="scroll to top" onClick={handleClick} size="large">
+					<ArrowUpwardIcon color="secondary" />
 				</IconButton>
 			</Box>
 		</Fade>
