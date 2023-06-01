@@ -10,7 +10,10 @@ export default function About() {
 	return (
 		<Section name={Sections.About}>
 			<SectionTitle> {t(`${Sections.About}.title`)} </SectionTitle>
-			<Typography>{t(`${Sections.About}.description`)}</Typography>
+			{
+				(t(`${Sections.About}.description`, {returnObjects: true}) as string[])
+					.map((p: string, i: number) => <Typography key={i} dangerouslySetInnerHTML={{__html: p}} sx={{mb: "1rem"}} />)
+			}
 		</Section>
 	);
 }
