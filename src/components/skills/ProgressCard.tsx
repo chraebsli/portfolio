@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Accordion, AccordionDetails, AccordionSummary, Card, Grid, SvgIcon, useMediaQuery, useTheme } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { SubSectionTitle } from "../Text";
+import { SubSectionTitle } from "../common/Text";
 
 type Props = {
 	size: {

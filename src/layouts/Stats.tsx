@@ -1,5 +1,5 @@
 import { Stack, Typography, useTheme } from "@mui/material";
-import { SectionTitle } from "../components/Text";
+import { SectionTitle } from "../components/common/Text";
 import { useTranslation } from "react-i18next";
 import Section from "../components/common/Section";
 import { Sections } from "../type/page";

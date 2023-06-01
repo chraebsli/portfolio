@@ -3,7 +3,7 @@ import { Nav, Navbar } from "react-bootstrap";
 import { MaterialUISwitch } from "./ThemeSwitch";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useTranslation } from "react-i18next";
-import { Image } from "../Text";
+import { Image } from "./Text";
 import { Sections } from "../../type/page";
 
 const sections = [

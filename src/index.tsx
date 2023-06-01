@@ -16,7 +16,7 @@ import ScrollToTop from "./components/common/ScrollToTop";
 // layouts
 import Welcome from "./layouts/Welcome";
 import About from "./layouts/About";
-import { Line } from "./components/Text";
+import { Line } from "./components/common/Text";
 import Skills from "./layouts/Skills";
 import Stats from "./layouts/Stats";
 
