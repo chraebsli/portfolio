@@ -15,7 +15,7 @@ export default function Skills() {
 	return (
 		<Section name={Sections.Skills}>
 			<SectionTitle>
-				<SchoolIcon /> {t(`${Sections.Skills}.title`)}
+				<SchoolIcon fontSize="inherit" /> {t(`${Sections.Skills}.title`)}
 			</SectionTitle>
 			<Typography>
 				{t(`${Sections.Skills}.description`)}
