@@ -12,13 +12,14 @@ import "./styles/main.sass";
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
 import ScrollToTop from "./components/common/ScrollToTop";
+import { Line } from "./components/common/Text";
 
 // layouts
 import Welcome from "./layouts/Welcome";
 import About from "./layouts/About";
-import { Line } from "./components/common/Text";
 import Skills from "./layouts/Skills";
 import Stats from "./layouts/Stats";
+import Social from "./layouts/Social";
 
 const light = createTheme({
 	palette: {
@@ -57,10 +58,11 @@ function App() {
 	inject();
 
 	const sections = [
-		<Welcome key={1}/>,
-		<About key={2}/>,
-		<Skills key={3}/>,
-		<Stats key={4}/>,
+		<Welcome key={1} />,
+		<About key={2} />,
+		<Skills key={3} />,
+		<Stats key={4} />,
+		<Social key={5} />,
 	];
 
 	return (
@@ -78,7 +80,7 @@ function App() {
 					))}
 				</main>
 			</Container>
-			<Box sx={{height: "220px", marginTop: "5rem"}} />
+			<Box sx={{height: "150px", marginTop: "3rem"}} />
 			<Footer />
 			<ScrollToTop />
 		</ThemeProvider>
