@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { Box, Container, createTheme, CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
 import { useCookies } from "react-cookie";
 import { inject } from "@vercel/analytics";
+import ReactGA from "react-ga";
 
 // styles
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -55,6 +56,8 @@ function App() {
 		setChecked(!checked);
 	};
 
+	ReactGA.initialize("G-GDTQQ9VBR2");
+	ReactGA.pageview(window.location.pathname + window.location.search);
 	inject();
 
 	const sections = [
