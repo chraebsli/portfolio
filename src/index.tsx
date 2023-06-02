@@ -56,7 +56,7 @@ function App() {
 		setChecked(!checked);
 	};
 
-	ReactGA.initialize("G-GDTQQ9VBR2");
+	ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID as string);
 	ReactGA.pageview(window.location.pathname + window.location.search);
 	inject();
 
