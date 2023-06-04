@@ -117,8 +117,8 @@ type LinkProps = {
 
 function Link({children, href, onClick, active}: LinkProps) {
 	return (
-		<Nav.Link href={href} onClick={onClick} className={active ? "active" : ""}>
+		<a href={href} onClick={onClick} className={(active ? "active" : "") + " nav-link"}>
 			{children}
-		</Nav.Link>
+		</a>
 	);
 }
