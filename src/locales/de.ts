@@ -10,7 +10,6 @@ export default function de(): Translation {
 			header: {
 				title: "Nicholas Krebs",
 				links: {
-					welcome: "Willkommen",
 					about: "Über",
 					skills: "Skills",
 					stats: "Statistik",
