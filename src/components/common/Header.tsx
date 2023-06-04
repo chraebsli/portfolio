@@ -7,7 +7,6 @@ import { Image } from "./Text";
 import { Sections } from "../../type/page";
 
 const sections = [
-	{key: "welcome", href: `#${Sections.Welcome}`},
 	{key: "about", href: `#${Sections.About}`},
 	{key: "skills", href: `#${Sections.Skills}`},
 	{key: "stats", href: `#${Sections.Stats}`},
@@ -24,7 +23,7 @@ export default function Header({toggleTheme, checked}: Props) {
 		<AppBar position="fixed" enableColorOnDark>
 			<Container>
 				<Navbar collapseOnSelect expand="md" bg="none" variant="dark">
-					<Navbar.Brand href="/">
+					<Navbar.Brand href="#">
 						<Image src="/assets/logo-white-transparent.svg" alt="logo" width={50} height={50} />
 						<Typography component="span" variant="h6" sx={{marginLeft: "1rem"}}>
 							{t("header.title")}
