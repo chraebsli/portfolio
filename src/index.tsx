@@ -3,8 +3,6 @@ import { createRoot } from "react-dom/client";
 import { Box, Container, createTheme, CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
 import { useCookies } from "react-cookie";
 import { inject } from "@vercel/analytics";
-
-// styles
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/main.sass";
 
