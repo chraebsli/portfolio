@@ -7,7 +7,7 @@ export default function Welcome() {
 	const {t} = useTranslation("sections");
 
 	return (
-		<Section name={Sections.Welcome} noCard>
+		<Section name={Sections.Welcome} noCard noindex>
 			<Typography variant="h3" component="h1" sx={{color: "primary.main"}}>
 				{t(`${Sections.Welcome}.welcome`)}
 			</Typography>

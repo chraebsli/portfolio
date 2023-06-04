@@ -37,7 +37,7 @@ export default function Header({toggleTheme, checked}: Props) {
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollPosition = window.scrollY;
-			const sections = document.querySelectorAll("section");
+			const sections: NodeListOf<HTMLElement> = document.querySelectorAll("section:not(.noIndex)");
 
 			sections.forEach((section) => {
 				const sectionTop = section.offsetTop;
