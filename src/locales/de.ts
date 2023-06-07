@@ -20,6 +20,12 @@ export default function de(): Translation {
 			footer: {
 				copyright: "Nicholas Krebs",
 			},
+			error: {
+				404: {
+					title: "Error 404 - Seite nicht gefunden",
+					description: "Die Seite, die du suchst, existiert nicht.",
+				},
+			},
 		},
 		sections: {
 			welcome: {

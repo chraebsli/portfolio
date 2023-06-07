@@ -14,6 +14,12 @@ export type Translation = {
 		footer: {
 			copyright: string,
 		},
+		error: {
+			404: {
+				title: string,
+				description: string,
+			}
+		},
 	},
 	sections: {
 		welcome: {
