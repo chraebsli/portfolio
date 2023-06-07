@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { AppBar, Container, Stack, Typography } from "@mui/material";
 import { Nav, Navbar } from "react-bootstrap";
 import { MaterialUISwitch } from "./ThemeSwitch";
@@ -5,7 +6,7 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 import { Image } from "./Text";
 import { Sections } from "../../type/page";
-import React, { useEffect, useState } from "react";
+import { constructTitle } from "./Meta";
 
 const sections = [
 	{key: "about", href: `#${Sections.About}`},
@@ -23,16 +24,6 @@ export default function Header({toggleTheme, checked}: Props) {
 
 	const initialSection = window?.location.href.split("#")[1];
 	const [activeSection, setActiveSection] = useState(initialSection || "#");
-
-	const handleLinkClick = (section: string) => {
-		setActiveSection(section);
-		scrollToSection(section);
-	};
-
-	const scrollToSection = (section: string) => {
-		const element = document.getElementById(section);
-		element?.scrollIntoView({behavior: "smooth"});
-	};
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -92,7 +83,7 @@ export default function Header({toggleTheme, checked}: Props) {
 						<Nav className="me-auto" />
 						<Nav>
 							{sections.map(page => (
-								<Link key={page.key} href={page.href} active={activeSection === page.key} onClick={() => handleLinkClick(page.key)}>
+								<Link key={page.key} href={page.href} active={activeSection === page.key}>
 									{t(`header.links.${page.key}`)}
 								</Link>
 							))}
@@ -111,13 +102,12 @@ export default function Header({toggleTheme, checked}: Props) {
 type LinkProps = {
 	children: React.ReactNode;
 	href: string;
-	onClick: () => void;
 	active: boolean;
 }
 
-function Link({children, href, onClick, active}: LinkProps) {
+function Link({children, href, active}: LinkProps) {
 	return (
-		<a href={href} onClick={onClick} className={(active ? "active" : "") + " nav-link"}>
+		<a /*href={href}*/ className={(active ? "active" : "") + " nav-link"}>
 			{children}
 		</a>
 	);
