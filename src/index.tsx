@@ -12,7 +12,6 @@ import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
 import ScrollToTop from "./components/common/ScrollToTop";
 import { Line } from "./components/common/Text";
-import Meta from "./components/common/Meta";
 
 // layouts
 import Welcome from "./layouts/Welcome";
@@ -84,7 +83,6 @@ function App() {
 	return (
 		<ThemeProvider theme={theme === "light" ? light : dark}>
 			<CssBaseline />
-			<Meta />
 			<Header toggleTheme={toggleTheme} checked={checked} />
 			<Box sx={{height: "150px", marginTop: "3rem"}} />
 			<Container sx={{mt: "2rem", mb: "2rem"}}>
