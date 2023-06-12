@@ -5,18 +5,24 @@ import { useTranslation } from "react-i18next";
 import { PageUrl } from "../../type/page";
 import { useState } from "react";
 
+export const constructTitle = () => {
+	const {t} = useTranslation("components");
+
+	const pageTitle = (function() {
+		const {t} = useTranslation("meta");
+		return t("title");
+	})();
+	const currentSection = window?.location.href.split("#")[1];
+	const section = currentSection ? `${t(`header.links.${currentSection}`)}` : null;
+
+	return `${section ? `${section} |` : ""} ${pageTitle}`;
+};
+
 export default function Meta() {
 	const {t} = useTranslation("meta");
 
-	const pageTitle = t("title");
 	const description = t("description");
 
-	const constructTitle = () => {
-		const {t} = useTranslation("components");
-		const currentSection = window?.location.href.split("#")[1];
-		const section = currentSection ? `${t(`header.links.${currentSection}`)}` : null;
-		return `${section ? `${section} |` : ""} ${pageTitle}`;
-	};
 	const [title, setTitle] = useState(constructTitle());
 
 	const openGraph = {

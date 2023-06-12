@@ -6,7 +6,7 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 import { Image } from "./Text";
 import { Sections } from "../../type/page";
-import { constructTitle } from "./Meta";
+import Meta, { constructTitle } from "./Meta";
 
 const sections = [
 	{key: "about", href: `#${Sections.About}`},
@@ -66,8 +66,12 @@ export default function Header({toggleTheme, checked}: Props) {
 		window.location.hash = activeSection;
 	}, [activeSection]);
 
+	const pageTitle = constructTitle();
+	document.title = pageTitle;
+
 	return (
 		<AppBar position="fixed" enableColorOnDark>
+			<Meta />
 			<Container>
 				<Navbar collapseOnSelect expand="md" bg="none" variant="dark">
 					<Navbar.Brand href="#">
