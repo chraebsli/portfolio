@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { Box, Container, createTheme, CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
 import { useCookies } from "react-cookie";
 import { inject } from "@vercel/analytics";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/main.sass";
 
@@ -19,6 +20,7 @@ import About from "./layouts/About";
 import Skills from "./layouts/Skills";
 import Stats from "./layouts/Stats";
 import Social from "./layouts/Social";
+import Error404 from "./layouts/error/404";
 
 const light = createTheme({
 	palette: {
@@ -34,6 +36,21 @@ const dark = createTheme({
 		secondary: {main: "#ffffff"},
 	},
 });
+
+type Props = {
+	children: React.ReactNode;
+}
+
+function RoutingWrapper({children}: Props) {
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={children} />
+				<Route path="*" element={<Error404 />} />
+			</Routes>
+		</BrowserRouter>
+	);
+}
 
 function App() {
 	const [cookies, setCookie] = useCookies(["colorScheme"]);
@@ -73,12 +90,14 @@ function App() {
 			<Container sx={{mt: "2rem", mb: "2rem"}}>
 				<main>
 					<section id="" style={{height: "1rem"}} />
-					{sections.map((section, index) => (
-						<React.Fragment key={index}>
-							{section}
-							{index !== sections.length - 1 && <Line top={5} bottom={5} />}
-						</React.Fragment>
-					))}
+					<RoutingWrapper>
+						{sections.map((section, index) => (
+							<React.Fragment key={index}>
+								{section}
+								{index !== sections.length - 1 && <Line top={5} bottom={5} />}
+							</React.Fragment>
+						))}
+					</RoutingWrapper>
 				</main>
 			</Container>
 			<Box sx={{height: "150px", marginTop: "3rem"}} />
