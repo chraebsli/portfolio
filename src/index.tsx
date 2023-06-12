@@ -4,8 +4,6 @@ import { Box, Container, createTheme, CssBaseline, ThemeProvider, useMediaQuery 
 import { useCookies } from "react-cookie";
 import { inject } from "@vercel/analytics";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-// styles
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/main.sass";
 
@@ -89,6 +87,7 @@ function App() {
 			<Box sx={{height: "150px", marginTop: "3rem"}} />
 			<Container sx={{mt: "2rem", mb: "2rem"}}>
 				<main>
+					<section id="" style={{height: "1rem"}} />
 					<RoutingWrapper>
 						{sections.map((section, index) => (
 							<React.Fragment key={index}>

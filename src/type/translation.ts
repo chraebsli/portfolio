@@ -4,7 +4,6 @@ export type Translation = {
 		header: {
 			title: string,
 			links: {
-				welcome: string,
 				about: string,
 				skills: string,
 				stats: string,
