@@ -20,7 +20,6 @@ export default function socialMediaList(): SocialItem[] {
 			<BsMastodon size={70} />,
 			"Mastodon",
 			"@chraebsli@techhub.social",
-			"me",
 		),
 		new SocialItem(
 			"https://www.linkedin.com/in/nicholas-krebs/",

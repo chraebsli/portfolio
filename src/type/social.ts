@@ -6,6 +6,5 @@ export class SocialItem {
 		public readonly icon: React.ReactNode,
 		public readonly name: string,
 		public readonly user: string,
-		public readonly rel?: string,
 	) {}
 }
