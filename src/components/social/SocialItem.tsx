@@ -7,7 +7,7 @@ type Props = {
 export default function SocialItem({item}: Props) {
 	return (
 		<Box className="social-item">
-			<a href={item.href} target="_blank" rel="noreferrer">
+			<a href={item.href} target="_blank" rel={`noreferrer ${item.rel || ""}`}>
 				<Box className="social-item-icon" sx={{width: "100%", color: "text.primary"}}>
 					{item.icon}
 				</Box>

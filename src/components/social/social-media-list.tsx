@@ -1,4 +1,4 @@
-import { BsEnvelopeOpenFill, BsGithub, BsInstagram, BsLinkedin, BsStackOverflow, BsTwitter } from "react-icons/bs";
+import { BsEnvelopeOpenFill, BsGithub, BsInstagram, BsLinkedin, BsMastodon, BsStackOverflow } from "react-icons/bs";
 import { SocialItem } from "../../type/social";
 
 export default function socialMediaList(): SocialItem[] {
@@ -16,10 +16,11 @@ export default function socialMediaList(): SocialItem[] {
 			"chraebsli",
 		),
 		new SocialItem(
-			"https://twitter.com/chraebsli_dev",
-			<BsTwitter size={70} />,
-			"Twitter",
-			"chraebsli_dev",
+			"https://techhub.social/@chraebsli",
+			<BsMastodon size={70} />,
+			"Mastodon/techhub.social",
+			"@chraebsli",
+			"me",
 		),
 		new SocialItem(
 			"https://www.linkedin.com/in/nicholas-krebs/",
