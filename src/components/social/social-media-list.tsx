@@ -18,8 +18,8 @@ export default function socialMediaList(): SocialItem[] {
 		new SocialItem(
 			"https://techhub.social/@chraebsli",
 			<BsMastodon size={70} />,
-			"Mastodon/techhub.social",
-			"@chraebsli",
+			"Mastodon",
+			"@chraebsli@techhub.social",
 			"me",
 		),
 		new SocialItem(
