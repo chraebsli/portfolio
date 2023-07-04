@@ -34,6 +34,8 @@ export default function Meta() {
 			<meta name="twitter:description" content={openGraph.description} />
 			<meta name="twitter:image" content={openGraph.image} />
 			<meta name="twitter:card" content="summary_large_image" />
+
+			<link rel="me" href="https://techhub.social/@chraebsli" />
 		</Helmet>
 	);
 }
