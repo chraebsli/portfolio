@@ -1,4 +1,4 @@
-import { BsEnvelopeOpenFill, BsGithub, BsInstagram, BsLinkedin, BsMastodon, BsStackOverflow, BsTwitter } from "react-icons/bs";
+import { BsEnvelopeOpenFill, BsGithub, BsLinkedin, BsMastodon, BsStackOverflow } from "react-icons/bs";
 import { SocialItem } from "../../type/social";
 import { TbBrandKbin } from "react-icons/tb";
 
