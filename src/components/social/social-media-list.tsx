@@ -17,6 +17,12 @@ export default function socialMediaList(): SocialItem[] {
 			"chraebsli",
 		),
 		new SocialItem(
+			"https://www.linkedin.com/in/nicholas-krebs/",
+			<BsLinkedin size={70} />,
+			"LinkedIn",
+			"nicholas-krebs",
+		),
+		new SocialItem(
 			"https://techhub.social/@chraebsli",
 			<BsMastodon size={70} />,
 			"Mastodon",
@@ -27,12 +33,6 @@ export default function socialMediaList(): SocialItem[] {
 			<TbBrandKbin size={70} />,
 			"Kbin",
 			"@chraebsli@kbin.social",
-		),
-		new SocialItem(
-			"https://www.linkedin.com/in/nicholas-krebs/",
-			<BsLinkedin size={70} />,
-			"LinkedIn",
-			"nicholas-krebs",
 		),
 		new SocialItem(
 			"mailto:nicholas@nicholas-krebs.ch",
