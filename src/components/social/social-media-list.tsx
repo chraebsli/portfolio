@@ -1,5 +1,6 @@
 import { BsEnvelopeOpenFill, BsGithub, BsInstagram, BsLinkedin, BsMastodon, BsStackOverflow, BsTwitter } from "react-icons/bs";
 import { SocialItem } from "../../type/social";
+import { TbBrandKbin } from "react-icons/tb";
 
 export default function socialMediaList(): SocialItem[] {
 	return [
@@ -22,10 +23,10 @@ export default function socialMediaList(): SocialItem[] {
 			"@chraebsli@techhub.social",
 		),
 		new SocialItem(
-			"https://twitter.com/chraebsli_dev",
-			<BsTwitter size={70} />,
-			"Twitter",
-			"chraebsli_dev",
+			"https://kbin.social/u/chraebsli",
+			<TbBrandKbin size={70} />,
+			"Kbin",
+			"@chraebsli@kbin.social",
 		),
 		new SocialItem(
 			"https://www.linkedin.com/in/nicholas-krebs/",
@@ -34,10 +35,10 @@ export default function socialMediaList(): SocialItem[] {
 			"nicholas-krebs",
 		),
 		new SocialItem(
-			"mailto:contact@nicholas-krebs.ch",
+			"mailto:nicholas@nicholas-krebs.ch",
 			<BsEnvelopeOpenFill size={70} />,
 			"E-Mail",
-			"contact@nicholas-krebs.ch",
+			"nicholas@nicholas-krebs.ch",
 		),
 	];
 }
