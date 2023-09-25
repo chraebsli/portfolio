@@ -1,6 +1,7 @@
-import { BsEnvelopeOpenFill, BsGithub, BsLinkedin, BsMastodon, BsStackOverflow } from "react-icons/bs";
-import { SocialItem } from "../../type/social";
+import { BsEnvelopeOpenFill, BsGithub, BsMastodon, BsStackOverflow } from "react-icons/bs";
 import { TbBrandKbin } from "react-icons/tb";
+import { SocialItem } from "../../type/social";
+import { SiMatrix } from "react-icons/si";
 
 export default function socialMediaList(): SocialItem[] {
 	return [
@@ -17,10 +18,10 @@ export default function socialMediaList(): SocialItem[] {
 			"chraebsli",
 		),
 		new SocialItem(
-			"https://www.linkedin.com/in/nicholas-krebs/",
-			<BsLinkedin size={70} />,
-			"LinkedIn",
-			"nicholas-krebs",
+			"mailto:nicholas@nicholas-krebs.ch",
+			<BsEnvelopeOpenFill size={70} />,
+			"E-Mail",
+			"nicholas@nicholas-krebs.ch",
 		),
 		new SocialItem(
 			"https://techhub.social/@chraebsli",
@@ -35,10 +36,10 @@ export default function socialMediaList(): SocialItem[] {
 			"@chraebsli@kbin.social",
 		),
 		new SocialItem(
-			"mailto:nicholas@nicholas-krebs.ch",
-			<BsEnvelopeOpenFill size={70} />,
-			"E-Mail",
-			"nicholas@nicholas-krebs.ch",
+			"https://matrix.to/#/@chraebsli:matrix.org",
+			<SiMatrix size={70} />,
+			"Matrix",
+			"@chraebsli:matrix.org",
 		),
 	];
 }
