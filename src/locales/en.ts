@@ -4,7 +4,7 @@ export default function en(): Translation {
 	return {
 		meta: {
 			title: "Nicholas Krebs",
-			description: "I am a 3rd year IT student interested in web development & programming.",
+			description: "IT enthusiast & web developer from Switzerland",
 		},
 		components: {
 			header: {
@@ -29,15 +29,15 @@ export default function en(): Translation {
 		},
 		sections: {
 			welcome: {
-				welcome: "Hey, I'm Nicholas Krebs/ «chraebsli»",
-				description: "I am a 3rd year IT student interested in web development & programming.",
+				welcome: "Hey, I'm Nicholas/ «chraebsli»",
+				description: "IT enthusiast & web developer from Switzerland",
 			},
 			about: {
 				title: "About me",
 				description: [
-					"I am a 3rd year IT student at the “Technische Fachschule” in Bern, and I am very interested in IT and especially in web development & programming. That's why I like to work on IT projects in my spare time. In addition to development, I lead a group of scouts and play in a brass band.",
-					"I prefer to program with React and Next.js in the frontend, Express.js and TypeORM in the backend and TypeScript as the programming language. Nevertheless, I'm also familiar with Python and PHP, but don't use them that often.",
-					"To earn something alongside my apprenticeship, I also work for private clients. This is because my training is school-based and financed by the canton of Bern. As a result, I do not earn any money during my apprenticeship.",
+					"I’m a young IT enthusiast & web developer from Switzerland who is truly interested in web development and other IT stuff. In my spare time, I like to code and strengthen my skills. Furthermore, I’m in a brass band, a scout leader, and a snowboarder in winter.",
+					"My favorite frameworks are React and Next.js for the frontend, Express.js and TypeORM for the backend, and TypeScript as the programming language. Nevertheless, I'm also familiar with Python and PHP, but don't use them that often.",
+					"Currently, I'm working on some web projects and maintaining a few websites for my clients.",
 					"You can find out which services I offer at <a href='https://chraebsli.dev'>https://chraebsli.dev</a>.",
 				],
 			},
