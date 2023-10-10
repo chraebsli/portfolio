@@ -4,7 +4,7 @@ export default function de(): Translation {
 	return {
 		meta: {
 			title: "Nicholas Krebs",
-			description: "Ich bin ein Informatiklehrling im 3. Jahr und interessiere mich für Webentwicklung & Programmierung.",
+			description: "IT Enthusiast & Web Entwickler aus der Schweiz",
 		},
 		components: {
 			header: {
@@ -29,15 +29,15 @@ export default function de(): Translation {
 		},
 		sections: {
 			welcome: {
-				welcome: "Hey, ich bin Nicholas Krebs/ «chraebsli»",
-				description: "Ich bin ein Informatiklehrling im 3. Jahr und interessiere mich für Webentwicklung & Programmierung.",
+				welcome: "Hey, ich bin Nicholas/ «chraebsli»",
+				description: "IT Enthusiast & Web Entwickler aus der Schweiz",
 			},
 			about: {
 				title: "Über mich",
 				description: [
-					"Ich bin ein Informatiklehrling im 3. Jahr an der Technischen Fachschule in Bern und interessiere mich sehr für die Informatik und vor allem für Webentwicklung & Programmierung. Daher arbeite ich auch gerne in meiner Freizeit an IT Projekten. Neben der Entwicklung leite ich noch eine Gruppe Pfadfinder und spiele in einer Brass Band.",
-					"Am liebsten programmiere ich mit React und Next.js im Frontend, Express.js und TypeORM im Backend und als Programmiersprache dazu passend TypeScript. Jedoch kenne ich mich auch mit Python und PHP aus, aber verwende diese nicht so oft.",
-					"Um neben meiner Ausbildung noch etwas zu verdienen, arbeite ich zusätzlich auch für private Kunden. Dies hat der Grund, weil meine Ausbildung schulisch basiert ist und vom Kanton Bern finanziert wird. Dadurch verdiene ich kein Geld während meiner Lehre.",
+					"Ich bin ein junger IT Enthusiast und Webentwickler aus der Schweiz, der sich wirklich für Webentwicklung und andere IT Themen interessiert. In meiner Freizeit programmiere ich gerne und stärke meine Fähigkeiten. Ausserdem bin ich in einer Brass Band, ein Pfadfinderleiter und im Winter ein Snowboarder.",
+					"Meine Lieblingsframeworks sind React und Next.js für das Frontend, Express.js und TypeORM für das Backend und TypeScript als Programmiersprache. Allerdings kenne ich mich auch mit Python und PHP aus, nutze sie aber nicht so oft.",
+					"Derzeit arbeite ich an einigen Webprojekten und pflege Websites für meine Kunden.",
 					"Welche Dienstleistungen ich anbiete, findest du auf <a href='https://chraebsli.dev'>https://chraebsli.dev</a>.",
 				],
 			},
