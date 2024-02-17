@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // styles
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/main.sass";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 // components
 import Header from "./components/common/Header";
@@ -22,6 +23,7 @@ import Skills from "./layouts/Skills";
 import Stats from "./layouts/Stats";
 import Social from "./layouts/Social";
 import Error404 from "./layouts/error/404";
+import Experience from "./layouts/Experience";
 
 const light = createTheme({
 	palette: {
@@ -77,9 +79,10 @@ function App() {
 	const sections = [
 		<Welcome key={1} />,
 		<About key={2} />,
-		<Skills key={3} />,
-		<Stats key={4} />,
-		<Social key={5} />,
+		<Experience key={3} />,
+		<Skills key={4} />,
+		<Stats key={5} />,
+		<Social key={6} />,
 	];
 
 	return (
@@ -102,6 +105,7 @@ function App() {
 			<Box sx={{height: "150px", marginTop: "3rem"}} />
 			<Footer />
 			<ScrollToTop />
+			<SpeedInsights />
 		</ThemeProvider>
 	);
 }

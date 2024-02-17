@@ -6,6 +6,7 @@ export type Translation = {
 			links: {
 				welcome: string,
 				about: string,
+				experience: string,
 				skills: string,
 				stats: string,
 				social: string,
@@ -29,6 +30,18 @@ export type Translation = {
 		about: {
 			title: string,
 			description: string[],
+		},
+		experience: {
+			title: string,
+			description: string,
+			dates: {
+				today: string,
+			},
+			types: {
+				apprenticeship: string,
+				gymnasium: string,
+				school: string,
+			},
 		},
 		skills: {
 			title: string,
