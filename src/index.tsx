@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // styles
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/main.sass";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 // components
 import Header from "./components/common/Header";
@@ -104,6 +105,7 @@ function App() {
 			<Box sx={{height: "150px", marginTop: "3rem"}} />
 			<Footer />
 			<ScrollToTop />
+			<SpeedInsights />
 		</ThemeProvider>
 	);
 }
