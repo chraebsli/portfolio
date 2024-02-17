@@ -12,6 +12,7 @@ export default function de(): Translation {
 				links: {
 					welcome: "Willkommen",
 					about: "Über",
+					experience: "Ausbildung",
 					skills: "Skills",
 					stats: "Statistik",
 					social: "Socials",
@@ -40,6 +41,18 @@ export default function de(): Translation {
 					"Derzeit arbeite ich an einigen Webprojekten und pflege Websites für meine Kunden.",
 					"Welche Dienstleistungen ich anbiete, findest du auf <a href='https://chraebsli.dev'>https://chraebsli.dev</a>.",
 				],
+			},
+			experience: {
+				title: "Ausbildung",
+				description: "Hier ist meine Ausbildung:",
+				dates: {
+					today: "heute",
+				},
+				types: {
+					apprenticeship: "Lehre als Informatiker EFZ",
+					gymnasium: "Gymnasium als 9. Klasse",
+					school: "7. & 8. Klasse Sekundarstufe",
+				},
 			},
 			skills: {
 				title: "Skills",

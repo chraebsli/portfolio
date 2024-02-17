@@ -22,6 +22,7 @@ import Skills from "./layouts/Skills";
 import Stats from "./layouts/Stats";
 import Social from "./layouts/Social";
 import Error404 from "./layouts/error/404";
+import Experience from "./layouts/Experience";
 
 const light = createTheme({
 	palette: {
@@ -77,9 +78,10 @@ function App() {
 	const sections = [
 		<Welcome key={1} />,
 		<About key={2} />,
-		<Skills key={3} />,
-		<Stats key={4} />,
-		<Social key={5} />,
+		<Experience key={3} />,
+		<Skills key={4} />,
+		<Stats key={5} />,
+		<Social key={6} />,
 	];
 
 	return (

@@ -9,6 +9,7 @@ import { Sections } from "../../type/page";
 const sections = [
 	{key: "welcome", href: `#${Sections.Welcome}`},
 	{key: "about", href: `#${Sections.About}`},
+	{key: "experience", href: `#${Sections.Experience}`},
 	{key: "skills", href: `#${Sections.Skills}`},
 	{key: "stats", href: `#${Sections.Stats}`},
 	{key: "social", href: `#${Sections.Social}`},
