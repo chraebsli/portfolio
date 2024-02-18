@@ -5,14 +5,16 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 import { Image } from "./Text";
 import { Sections } from "../../type/page";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { Link } from "react-scroll";
 
 const sections = [
-	{key: "welcome", href: `#${Sections.Welcome}`},
-	{key: "about", href: `#${Sections.About}`},
-	{key: "experience", href: `#${Sections.Experience}`},
-	{key: "skills", href: `#${Sections.Skills}`},
-	{key: "stats", href: `#${Sections.Stats}`},
-	{key: "social", href: `#${Sections.Social}`},
+	{key: Sections.About},
+	{key: Sections.Experience},
+	{key: Sections.Skills},
+	{key: Sections.Stats},
+	{key: Sections.Social},
 ];
 
 type Props = {
@@ -25,11 +27,13 @@ export default function Header({toggleTheme, checked}: Props) {
 		<AppBar position="fixed" enableColorOnDark variant="outlined">
 			<Container>
 				<Navbar collapseOnSelect expand="md" bg="none" variant="dark">
-					<Navbar.Brand href="#">
-						<Image src="/assets/logo-white-transparent.svg" alt="logo" width={50} height={50} />
-						<Typography component="span" variant="h6" sx={{marginLeft: "1rem"}}>
-							{t("header.title")}
-						</Typography>
+					<Navbar.Brand>
+						<NavLink href="root">
+							<Image src="/assets/logo-white-transparent.svg" alt="logo" width={50} height={50} />
+							<Typography component="span" variant="h6" sx={{marginLeft: "1rem"}}>
+								{t("header.title")}
+							</Typography>
+						</NavLink>
 					</Navbar.Brand>
 
 					<Navbar.Toggle aria-controls="header-nav" />
@@ -38,9 +42,9 @@ export default function Header({toggleTheme, checked}: Props) {
 						<Nav className="me-auto" />
 						<Nav>
 							{sections.map(page => (
-								<Nav.Link key={page.key} href={page.href}>
+								<NavLink href={page.key} key={page.key}>
 									{t(`header.links.${page.key}`)}
-								</Nav.Link>
+								</NavLink>
 							))}
 						</Nav>
 						<Stack direction="row" sx={{alignItems: "center", justifyContent: "start"}}>
@@ -51,5 +55,29 @@ export default function Header({toggleTheme, checked}: Props) {
 				</Navbar>
 			</Container>
 		</AppBar>
+	);
+}
+
+type NavLinkProps = {
+	href: string;
+	children?: React.ReactNode;
+}
+
+function NavLink({children, href}: NavLinkProps) {
+	return (
+		<Typography variant="h6" sx={{margin: "0 .2rem", color: "text.secondary"}}>
+			<Link
+				activeClass="active"
+				to={href}
+				spy={true}
+				smooth={true}
+				offset={-100}
+				duration={500}
+				style={{cursor: "pointer", textDecoration: "none"}}
+				activeStyle={{color: "white"}}
+			>
+				{children}
+			</Link>
+		</Typography>
 	);
 }
