@@ -22,7 +22,7 @@ type Props = {
 export default function Header({toggleTheme, checked}: Props) {
 	const {t} = useTranslation("components");
 	return (
-		<AppBar position="fixed" enableColorOnDark>
+		<AppBar position="fixed" enableColorOnDark variant="outlined">
 			<Container>
 				<Navbar collapseOnSelect expand="md" bg="none" variant="dark">
 					<Navbar.Brand href="#">
