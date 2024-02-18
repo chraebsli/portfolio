@@ -14,7 +14,6 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
 import ScrollToTop from "./components/common/ScrollToTop";
-import { Line } from "./components/common/Text";
 
 // layouts
 import Welcome from "./layouts/Welcome";
@@ -30,6 +29,9 @@ const light = createTheme({
 		mode: "light",
 		primary: {main: "#507cff"},
 		secondary: {main: "#ffffff"},
+		text: {
+			disabled: "#ffffff8c",
+		},
 	},
 });
 const dark = createTheme({
@@ -37,6 +39,9 @@ const dark = createTheme({
 		mode: "dark",
 		primary: {main: "#507cff"},
 		secondary: {main: "#ffffff"},
+		text: {
+			disabled: "#ffffff8c",
+		},
 	},
 });
 
@@ -96,7 +101,6 @@ function App() {
 						{sections.map((section, index) => (
 							<React.Fragment key={index}>
 								{section}
-								{index !== sections.length - 1 && <Line top={5} bottom={5} />}
 							</React.Fragment>
 						))}
 					</RoutingWrapper>

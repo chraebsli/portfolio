@@ -65,13 +65,13 @@ type NavLinkProps = {
 
 function NavLink({children, href}: NavLinkProps) {
 	return (
-		<Typography variant="h6" sx={{margin: "0 .2rem", color: "text.secondary"}}>
+		<Typography variant="h6" sx={{margin: "0 .2rem", color: "text.disabled"}}>
 			<Link
 				activeClass="active"
 				to={href}
 				spy={true}
 				smooth={true}
-				offset={-100}
+				offset={-250}
 				duration={500}
 				style={{cursor: "pointer", textDecoration: "none"}}
 				activeStyle={{color: "white"}}
