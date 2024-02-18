@@ -14,9 +14,6 @@ export default function Progress({text, icon, progress}: Props) {
 				<Box sx={{width: "100%", mr: 0}}>
 					<LinearProgress variant="determinate" value={progress} sx={{p: ".5rem"}} />
 				</Box>
-				<Box sx={{minWidth: "2rem"}}>
-					<Typography>{progress}% </Typography>
-				</Box>
 			</Stack>
 		</Box>
 	);
