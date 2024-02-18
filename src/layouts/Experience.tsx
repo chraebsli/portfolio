@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import Section from "../components/common/Section";
 import { Sections } from "../type/page";
 import WorkIcon from "@mui/icons-material/Work";
-import { default as TimelineC } from "../components/experience/Timeline";
+import Timeline from "../components/experience/Timeline";
 import TimelineItem from "../components/experience/TimelineItem";
 import { TimelineItem as TimelineItemType } from "@type/timeline";
 
@@ -40,11 +40,11 @@ export default function Experience() {
 			<Typography>
 				{t(`${Sections.Experience}.description`)}
 			</Typography>
-			<TimelineC>
+			<Timeline>
 				{timelineItems.map((item, i) => (
 					<TimelineItem key={i} item={item} />
 				))}
-			</TimelineC>
+			</Timeline>
 		</Section>
 	);
 }
