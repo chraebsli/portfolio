@@ -1,7 +1,6 @@
-import { BsEnvelopeOpenFill, BsGithub, BsMastodon, BsStackOverflow } from "react-icons/bs";
-import { TbBrandKbin } from "react-icons/tb";
+import { BsDiscord, BsGithub, BsMastodon, BsStackOverflow } from "react-icons/bs";
 import { SocialItem } from "../../type/social";
-import { SiMatrix } from "react-icons/si";
+import { SiMatrix, SiProtonmail } from "react-icons/si";
 
 export default function socialMediaList(): SocialItem[] {
 	return [
@@ -19,7 +18,7 @@ export default function socialMediaList(): SocialItem[] {
 		),
 		new SocialItem(
 			"mailto:nicholas@nicholas-krebs.ch",
-			<BsEnvelopeOpenFill size={70} />,
+			<SiProtonmail size={70} />,
 			"E-Mail",
 			"nicholas@nicholas-krebs.ch",
 		),
@@ -30,10 +29,10 @@ export default function socialMediaList(): SocialItem[] {
 			"@chraebsli@techhub.social",
 		),
 		new SocialItem(
-			"https://kbin.social/u/chraebsli",
-			<TbBrandKbin size={70} />,
-			"Kbin",
-			"@chraebsli@kbin.social",
+			"https://discordapp.com/users/603982275021111298",
+			<BsDiscord size={70} />,
+			"Discord",
+			"chraebsli",
 		),
 		new SocialItem(
 			"https://matrix.to/#/@chraebsli:matrix.org",

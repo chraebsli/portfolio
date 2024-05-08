@@ -37,8 +37,9 @@ export type Translation = {
 			dates: {
 				today: string,
 			},
-			types: {
-				apprenticeship: string,
+			subtitles: {
+				crabston: string,
+				tfbern: string,
 				gymnasium: string,
 				school: string,
 			},

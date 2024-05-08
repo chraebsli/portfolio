@@ -13,21 +13,27 @@ export default function Experience() {
 
 	const timelineItems: TimelineItemType[] = [
 		{
+			from: "2024",
+			to: t(`${Sections.Experience}.dates.today`),
+			type: t(`${Sections.Experience}.subtitles.crabston`),
+			company: "Crabston GmbH",
+		},
+		{
 			from: "2020",
 			to: t(`${Sections.Experience}.dates.today`),
-			type: t(`${Sections.Experience}.types.apprenticeship`),
+			type: t(`${Sections.Experience}.subtitles.tfbern`),
 			company: "Technische Fachschule Bern",
 		},
 		{
 			from: "2019",
 			to: "2020",
-			type: t(`${Sections.Experience}.types.gymnasium`),
+			type: t(`${Sections.Experience}.subtitles.gymnasium`),
 			company: "Gymnasium Oberaargau",
 		},
 		{
 			from: "2017",
 			to: "2019",
-			type: t(`${Sections.Experience}.types.school`),
+			type: t(`${Sections.Experience}.subtitles.school`),
 			company: "Oberstufenzentrum Wiedlisbach",
 		},
 	];
