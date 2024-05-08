@@ -48,8 +48,9 @@ export default function de(): Translation {
 				dates: {
 					today: "heute",
 				},
-				types: {
-					apprenticeship: "Lehre als Informatiker EFZ",
+				subtitles: {
+					crabston: "Selbstständig als Informatiker (parallel zur Lehre)",
+					tfbern: "Lehre als Informatiker EFZ",
 					gymnasium: "Gymnasium als 9. Klasse",
 					school: "7. & 8. Klasse Sekundarstufe",
 				},

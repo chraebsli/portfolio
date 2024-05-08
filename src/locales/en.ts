@@ -48,8 +48,9 @@ export default function en(): Translation {
 				dates: {
 					today: "today",
 				},
-				types: {
-					apprenticeship: "Apprenticeship as a computer specialist EFZ",
+				subtitles: {
+					crabston: "Self-employed as a computer scientist (parallel to apprentice)",
+					tfbern: "Apprenticeship as a computer specialist EFZ",
 					gymnasium: "Gymnasium as 9th grade",
 					school: "Secondary school 7th & 8th grade",
 				},
