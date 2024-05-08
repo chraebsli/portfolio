@@ -1,6 +1,6 @@
 import Progress from "./Progress";
 import ProgressCard from "./ProgressCard";
-import { SiHtml5, SiMaas, SiMysql, SiPhp, SiPython, SiSqlite, SiTypescript } from "react-icons/si";
+import { SiHtml5, SiPhp, SiPython, SiTypescript } from "react-icons/si";
 import CodeIcon from "@mui/icons-material/Code";
 import { SvgIcon } from "@mui/material";
 

@@ -1,6 +1,6 @@
 import Progress from "./Progress";
 import ProgressCard from "./ProgressCard";
-import { SiGit, SiGithub, SiGrav, SiJira, SiLinux, SiPostgresql, SiVisualstudiocode, SiWebstorm } from "react-icons/si";
+import { SiGit, SiGithub, SiGrav, SiJira, SiLinux, SiPostgresql } from "react-icons/si";
 import ConstructionIcon from "@mui/icons-material/Construction";
 import { SvgIcon } from "@mui/material";
 
