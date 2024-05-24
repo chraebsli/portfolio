@@ -20,10 +20,6 @@
 					"value": "strict-origin-when-cross-origin"
 				},
 				{
-					"key": "Content-Security-Policy",
-					"value": "default-src 'self' https:; script-src 'self' 'unsafe-inline' vercel.live www.digistats.ch umami.crabston.dev; img-src 'self' data:; connect-src 'self' vitals.vercel-insights.com digistats.ch;"
-				},
-				{
 					"key": "Permissions-Policy",
 					"value": "battery=(), camera=(), geolocation=(), microphone=()"
 				}
