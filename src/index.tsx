@@ -4,11 +4,12 @@ import { Box, Container, createTheme, CssBaseline, ThemeProvider, useMediaQuery 
 import { useCookies } from "react-cookie";
 import { inject } from "@vercel/analytics";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/react";
+import umamiTrack from "./tools/umamiTrack";
 
 // styles
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/main.sass";
-import { SpeedInsights } from "@vercel/speed-insights/react";
 
 // components
 import Header from "./components/common/Header";
@@ -77,6 +78,7 @@ function App() {
 		setCookie("colorScheme", newTheme, {path: "/", expires: expires});
 		setTheme(newTheme);
 		setChecked(!checked);
+		umamiTrack("Theme Switch", {theme: newTheme});
 	};
 
 	inject();
