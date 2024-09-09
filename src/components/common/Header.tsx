@@ -8,6 +8,7 @@ import { Sections } from "../../type/page";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { Link } from "react-scroll";
+import umamiTrack from "../../tools/umamiTrack";
 
 const sections = [
 	{key: Sections.About},
@@ -75,6 +76,7 @@ function NavLink({children, href}: NavLinkProps) {
 				duration={500}
 				style={{cursor: "pointer", textDecoration: "none"}}
 				activeStyle={{color: "white"}}
+				onClick={() => {umamiTrack("Navigation", {href});}}
 			>
 				{children}
 			</Link>
