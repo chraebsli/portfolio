@@ -7,8 +7,8 @@ type Props = {
 }
 export default function SocialItem({item}: Props) {
 	return (
-		<Box className="social-item" onClick={() => {umamiTrack("Social", {name: item.name});}}>
-			<a href={item.href} target="_blank" rel="noreferrer me">
+		<Box className="social-item">
+			<a href={item.href} target="_blank" rel="noreferrer me" onClick={() => {umamiTrack("Social", {name: item.name});}}>
 				<Box className="social-item-icon" sx={{width: "100%", color: "text.primary"}}>
 					{item.icon}
 				</Box>
